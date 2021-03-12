@@ -1,8 +1,11 @@
-@model Cafesito.Models.Item;
+@model IEnumerable<Cafesito.Models.Item>;
 @{
     ViewData["Title"] = "Items";
 }
 
-<div class="text-center">
-    <h1>@Model.Name</h1>
-</div>
+
+@foreach(var item in Model){
+    <p>@item.Name</p>
+}
+
+

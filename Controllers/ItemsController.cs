@@ -17,15 +17,9 @@ namespace Cafesito.Controllers
         }
         public IActionResult Index()
         {
-            var fake = new Item(){
-                Id = 1,
-                Name = "Coffee"
-            };
+            var items = _context.Items.ToList();
 
-            _context.Add(fake);
-            _context.SaveChanges();
-
-            return View(fake);
+            return View(items);
         }
     }
 }

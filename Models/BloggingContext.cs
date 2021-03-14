@@ -7,6 +7,7 @@ namespace Cafesito.Models
     public class BloggingContext : DbContext
     {
         public DbSet<Item> Items { get; set; }
+        public DbSet<Customer> Customers { get; set; }
 
         // The following configures EF to create a Sqlite database file as `C:\blogging.db`.
         // For Mac or Linux, change this to `/tmp/blogging.db` or any other absolute path.
